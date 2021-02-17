@@ -1,0 +1,14 @@
+version: '2'
+services:
+     my-angular-image:
+        image: my-angular-image
+        container_name: my-container
+        environment:
+           - "npm install && ng serve --host 0.0.0.0 --port 4200"
+        ports:
+          - "4200:4201"
+     sau-angular-image:
+         image: sau-angular-image
+         container_name: my-second-container
+         environment:
+            - "npm install && ng serve --host 0.0.0.0 --port 4200"
